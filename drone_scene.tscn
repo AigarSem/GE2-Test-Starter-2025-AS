@@ -42,14 +42,22 @@ mesh = SubResource("PlaneMesh_qhlfa")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("WorldBoundaryShape3D_jgr37")
 
-[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("drone", "target")]
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("drone", "target", "targetFPV", "targetFPVTarget")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.10388, 3.01379)
 script = ExtResource("1_jgr37")
 drone = NodePath("../Drone")
 target = NodePath("../Drone/Marker3D")
+targetFPV = NodePath("../Drone/Marker3DFPV")
+targetFPVTarget = NodePath("../Drone/Marker3DFPVTarget")
 
 [node name="Drone" parent="." instance=ExtResource("2_qrxkg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
 [node name="Marker3D" type="Marker3D" parent="Drone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11003, 2.11248)
+
+[node name="Marker3DFPV" type="Marker3D" parent="Drone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.536766)
+
+[node name="Marker3DFPVTarget" type="Marker3D" parent="Drone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.39264)
