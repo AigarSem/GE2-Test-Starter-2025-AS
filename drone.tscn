@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://goiv57waktmq"]
+[gd_scene load_steps=6 format=3 uid="uid://goiv57waktmq"]
+
+[ext_resource type="PackedScene" uid="uid://u0knwyisq7y6" path="res://prop.tscn" id="1_uvgqj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_etgmo"]
 size = Vector3(0.5, 0.25, 1)
@@ -28,6 +30,9 @@ shape = SubResource("BoxShape3D_uvgqj")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Arm1"]
 mesh = SubResource("BoxMesh_d5du7")
 
+[node name="Prop" parent="Arm1" instance=ExtResource("1_uvgqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0.25)
+
 [node name="Arm2" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -0.348, 0.0198526, 0.592)
 shape = SubResource("BoxShape3D_uvgqj")
@@ -36,12 +41,18 @@ shape = SubResource("BoxShape3D_uvgqj")
 mesh = SubResource("BoxMesh_d5du7")
 skeleton = NodePath("../../Arm2")
 
+[node name="Prop" parent="Arm2" instance=ExtResource("1_uvgqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0.25)
+
 [node name="Arm3" type="CollisionShape3D" parent="."]
 transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.348, 0.0198526, -0.592)
 shape = SubResource("BoxShape3D_uvgqj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Arm3"]
 mesh = SubResource("BoxMesh_d5du7")
+
+[node name="Prop" parent="Arm3" instance=ExtResource("1_uvgqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0.25)
 
 [node name="Arm4" type="CollisionShape3D" parent="."]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -0.348, 0.0198526, -0.592)
@@ -50,3 +61,6 @@ shape = SubResource("BoxShape3D_uvgqj")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Arm4"]
 mesh = SubResource("BoxMesh_d5du7")
 skeleton = NodePath("../../Arm2")
+
+[node name="Prop" parent="Arm4" instance=ExtResource("1_uvgqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0.25)

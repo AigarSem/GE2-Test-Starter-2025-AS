@@ -1,12 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://u0knwyisq7y6"]
+[gd_scene load_steps=6 format=3 uid="uid://u0knwyisq7y6"]
+
+[ext_resource type="Material" uid="uid://8voe464keo55" path="res://prop_material.tres" id="1_7ky6l"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_t34q6"]
+material = ExtResource("1_7ky6l")
 size = Vector3(0.075, 0.05, 0.65)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7ky6l"]
 size = Vector3(0.075, 0.05, 0.65)
 
 [sub_resource type="BoxMesh" id="BoxMesh_l1x3g"]
+material = ExtResource("1_7ky6l")
 size = Vector3(0.075, 0.05, 0.65)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bw8cs"]
