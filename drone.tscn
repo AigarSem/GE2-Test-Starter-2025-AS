@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://goiv57waktmq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_etgmo"]
+size = Vector3(0.5, 0.25, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uvgqj"]
+size = Vector3(0.5, 0.25, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uvgqj"]
+size = Vector3(0.25, 0.2, 0.75)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d5du7"]
+size = Vector3(0.25, 0.2, 0.75)
+
+[node name="Drone" type="RigidBody3D"]
+
+[node name="Body" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_etgmo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Body"]
+mesh = SubResource("BoxMesh_uvgqj")
+skeleton = NodePath("../..")
+
+[node name="Arm1" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0.34839, 0, 0.591795)
+shape = SubResource("BoxShape3D_uvgqj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Arm1"]
+mesh = SubResource("BoxMesh_d5du7")
+
+[node name="Arm2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -0.348, 0, 0.592)
+shape = SubResource("BoxShape3D_uvgqj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Arm2"]
+mesh = SubResource("BoxMesh_d5du7")
+skeleton = NodePath("../../Arm2")
+
+[node name="Arm3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.348, 0, -0.592)
+shape = SubResource("BoxShape3D_uvgqj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Arm3"]
+mesh = SubResource("BoxMesh_d5du7")
+
+[node name="Arm4" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -0.348, 0, -0.592)
+shape = SubResource("BoxShape3D_uvgqj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Arm4"]
+mesh = SubResource("BoxMesh_d5du7")
+skeleton = NodePath("../../Arm2")
