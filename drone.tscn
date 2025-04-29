@@ -22,14 +22,14 @@ mesh = SubResource("BoxMesh_uvgqj")
 skeleton = NodePath("../..")
 
 [node name="Arm1" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0.34839, 0, 0.591795)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0.34839, 0.0198526, 0.591795)
 shape = SubResource("BoxShape3D_uvgqj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Arm1"]
 mesh = SubResource("BoxMesh_d5du7")
 
 [node name="Arm2" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -0.348, 0, 0.592)
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -0.348, 0.0198526, 0.592)
 shape = SubResource("BoxShape3D_uvgqj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Arm2"]
@@ -37,14 +37,14 @@ mesh = SubResource("BoxMesh_d5du7")
 skeleton = NodePath("../../Arm2")
 
 [node name="Arm3" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.348, 0, -0.592)
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.348, 0.0198526, -0.592)
 shape = SubResource("BoxShape3D_uvgqj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Arm3"]
 mesh = SubResource("BoxMesh_d5du7")
 
 [node name="Arm4" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -0.348, 0, -0.592)
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -0.348, 0.0198526, -0.592)
 shape = SubResource("BoxShape3D_uvgqj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Arm4"]
