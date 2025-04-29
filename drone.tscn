@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://goiv57waktmq"]
+[gd_scene load_steps=7 format=3 uid="uid://goiv57waktmq"]
 
+[ext_resource type="Script" uid="uid://btgj6n2gqhrse" path="res://drone.gd" id="1_d5du7"]
 [ext_resource type="PackedScene" uid="uid://u0knwyisq7y6" path="res://prop.tscn" id="1_uvgqj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_etgmo"]
@@ -15,6 +16,7 @@ size = Vector3(0.25, 0.2, 0.75)
 size = Vector3(0.25, 0.2, 0.75)
 
 [node name="Drone" type="RigidBody3D"]
+script = ExtResource("1_d5du7")
 
 [node name="Body" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_etgmo")
