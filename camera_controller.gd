@@ -5,5 +5,5 @@ extends Camera3D
 
 
 func _process(delta: float) -> void:
-	global_position = lerp(global_position, target.global_position, delta * 5.0)
+	global_position = lerp(global_position, target.global_position, delta * 10.0)
 	look_at(drone.global_position)
