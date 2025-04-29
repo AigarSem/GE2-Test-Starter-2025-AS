@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1mt883kcp3i"]
+[gd_scene load_steps=8 format=3 uid="uid://b1mt883kcp3i"]
 
-[ext_resource type="Script" uid="uid://yqpk0fu84npt" path="res://drone_controller.gd" id="1_jgr37"]
 [ext_resource type="PackedScene" uid="uid://goiv57waktmq" path="res://drone.tscn" id="2_qrxkg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jgr37"]
@@ -26,7 +25,6 @@ size = Vector2(100, 100)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_jgr37"]
 
 [node name="drone_scene" type="Node3D"]
-script = ExtResource("1_jgr37")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nb8mf")
