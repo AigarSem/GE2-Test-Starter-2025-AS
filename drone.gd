@@ -3,7 +3,7 @@ extends RigidBody3D
 @export var max_speed:float = 20
 @export var max_spin_speed:float = 50
 @export var spin_up_speed:float = 2.0
-@export var slow_down_speed:float = 0.15
+@export var slow_down_speed:float = 0.1
 @export var turn_speed:float = 2.5
 
 @onready var props:Array = [$Arm1/Prop, $Arm2/Prop, $Arm3/Prop, $Arm4/Prop]
@@ -29,10 +29,12 @@ func _physics_process(delta: float) -> void:
 		spin_props()
 	
 	if Input.is_action_pressed("forward"):
-		linear_velocity += (max_speed * forward * delta)
+		if linear_velocity.length() < 20:
+			linear_velocity += (max_speed * forward * delta)
 	
 	if Input.is_action_pressed("reverse"):
-		linear_velocity += (max_speed * reverse * delta)
+		if linear_velocity.length() < 20:
+			linear_velocity += (max_speed * reverse * delta)
 	
 	if Input.is_action_pressed("left") or Input.is_action_pressed("right"):
 		var direction = Input.get_axis("left", "right")
